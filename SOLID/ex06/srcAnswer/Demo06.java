@@ -1,3 +1,5 @@
+package SOLID.ex06.srcAnswer;
+
 public class Demo06 {
     public static void main(String[] args) {
         new Aviary().release(new Bird());
