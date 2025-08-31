@@ -1,5 +1,4 @@
-package com.example.config;
-
+package comAns.example.config;
 
 import java.nio.file.Path;
 
