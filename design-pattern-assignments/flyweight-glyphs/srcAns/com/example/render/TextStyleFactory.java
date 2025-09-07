@@ -1,0 +1,18 @@
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TextStyleFactory {
+    private static final Map<String, TextStyle> cache = new HashMap<>();
+
+    public static TextStyle get(String font, int size, boolean bold) {
+        String key = font + "|" + size + "|" + (bold ? "B" : "N");
+        return cache.computeIfAbsent(key, k -> new TextStyle(font, size, bold));
+    }
+
+    // for debugging
+    public static int cacheSize() {
+        return cache.size();
+    }
+}
